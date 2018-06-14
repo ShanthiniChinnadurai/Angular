@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        var numbers = [98, 96, 99, 97, 100];
+
+        document.getElementById("demo").innerHTML = numbers;
+
+        function myfunction1() {
+            numbers.sort(function (a, b) { return a - b });
+
+            document.getElementById("demo").innerHTML = numbers;
+
+
+            // document.getElementById("demo").innerHTML = numbers[0];
+
+            numbers.sort(function (a, b) { return b - a });
+            document.getElementById("demo1").innerHTML = numbers;
+
+            // document.getElementById("demo1").innerHTML = numbers[0];
+
+        }
+
+    </script>
+
+    <button type="button" onclick="myfunction1()">sorting asc/des</button>
+
+
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        var numbers = [98, 96, 99, 97, 100];
+        //document.getElementById("demo3").innerHTML = numbers;
+        function myfunction2() {
+            numbers.sort(function (a, b) { return a - b });
+
+
+            document.getElementById("demo3").innerHTML = numbers[0];
+
+            numbers.sort(function (a, b) { return b - a });
+
+
+            document.getElementById("demo4").innerHTML = numbers[0];
+
+        }
+
+    </script>
+
+    <button type="button" onclick="myfunction2()">to find min/max</button>
+
+</body>
+
+</html>
